@@ -31,7 +31,7 @@ def other(func):
 
 other(hi)
 
-#Decorators
+#without a Decorator
 
 def new_decorator(func):
 
@@ -42,8 +42,16 @@ def new_decorator(func):
 
     return wrap_func
 
+#Decorators
+
+# def func_needs_decorator():
+#     print('needs a decorator')
+
+# func_needs_decorator = new_decorator(func_needs_decorator)
+# func_needs_decorator()
+
+# with decorator
+
+@new_decorator
 def func_needs_decorator():
     print('needs a decorator')
-
-func_needs_decorator = new_decorator(func_needs_decorator)
-func_needs_decorator()
